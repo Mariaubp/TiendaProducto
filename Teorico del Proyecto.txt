@@ -1,0 +1,66 @@
+Tecnologías Utilizadas
+Backend (Spring Boot)
+Lenguaje: Java 17
+
+Framework: Spring Boot 3.4.5
+
+Persistencia:
+
+Spring Data JPA
+
+SQL Server (mssql-jdbc)
+
+Herramientas:
+
+MapStruct (mapeo DTOs)
+
+Lombok (reducción de código boilerplate)
+
+Spring Validation (validaciones)
+
+Seguridad: Spring Security (JWT)
+
+Frontend (Angular)
+Angular 15
+
+TypeScript
+
+Angular Material (UI components)
+
+Axios (HTTP client)
+
+JWT authentication
+
+Base de Datos
+Microsoft SQL Server 2022
+ ----Como ejecutar el proyecto
+}confifurar el sql server  CREATE DATABASE TiendaProductos;
+GO  campiar en aplication.propirties por tu usuario y contraseña ejecutar el backen con mvn spring-boot:run y el front con ng serve 
+estructura del proyecto backend src/
+├── main/
+│   ├── java/
+│   │   └── tienda/
+│   │       └── tiendaproducto/
+│   │           ├── config/          # Configuraciones
+│   │           ├── controller/      # Controladores REST
+│   │           ├── dto/             # Objetos de transferencia
+│   │           ├── exception/       # Manejo de excepciones
+│   │           ├── model/           # Entidades JPA
+│   │           ├── repository/      # Repositorios
+│   │           ├── security/        # Configuración de seguridad
+│   │           ├── service/         # Lógica de negocio
+│   │           └── TiendaProductoApplication.java
+│   └── resources/
+│       ├── application.properties
+│       └── data.sql
+y el front src/app/
+├── components/
+│   ├── product/
+│   │   ├── product-list/      # Listado de productos
+│   │   ├── product-form/      # Formulario CRUD
+│   │   └── product-card/      # Tarjeta individual
+│   └── shared/                # Componentes reutilizables
+├── services/                  # Servicios HTTP
+├── models/                    # Interfaces TypeScript
+├── guards/                    # Guards de rutas
+└── interceptors/              # Interceptores HTTP
